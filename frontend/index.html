@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PDF Q&A Bot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>PDF Q&A Bot</h1>
+      <div class="config">
+        <label>
+          Backend URL:
+          <input id="backendUrl" value="http://localhost:8002" />
+        </label>
+        <label>
+          Upload PDF:
+          <input id="pdfFile" type="file" accept="application/pdf" />
+        </label>
+        <button id="uploadBtn">Upload</button>
+      </div>
+
+      <div class="status" id="status">No PDF uploaded yet.</div>
+
+      <div class="qa">
+        <input
+          id="questionInput"
+          type="text"
+          placeholder="Ask something about the PDF..."
+        />
+        <button id="askBtn">Ask</button>
+      </div>
+
+      <div id="answerBox" class="answer-box"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
